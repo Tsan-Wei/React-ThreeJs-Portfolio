@@ -12,8 +12,10 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>我是 <span className='text-[#ffffff]'>程璨偉</span></h1>
+          <p className={`${styles.heroSubText} mt-2 ml-2 text-white-100`}>網頁設計 &nbsp;/&nbsp;軟體開發</p>
         </div>
       </div>
+      <ComputersCanvas/>
     </section>
   )
 }
