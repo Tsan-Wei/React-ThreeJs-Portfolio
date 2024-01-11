@@ -9,11 +9,11 @@ const styles = {
       "text-[#dfd9ff] font-medium lg:text-[22px] md:text-[22px] sm:text-[20px] xs:text-[16px] text-[16px] lg:leading-[40px] font-light tracking-widest",
   
     sectionHeadText:
-      "text-[#a4d0ff] font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+      "text-[#a4d0ff] font-black md:text-[60px] sm:text-[50px] xs:text-[32px] text-[30px]",
     sectionSubText:
-      "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider font-bold",
+      "text-white sm:text-[18px] xs:text-[16px] text-[14px] text-secondary uppercase tracking-wider font-bold mb-2",
     programingLanguage:
-      "text-[#a4d0ff] font-black md:text-[20px] sm:text-[20px] xs:text-[20px] text-[20px]",
+      "text-[#ffffff] font-black md:text-[20px] sm:text-[20px] xs:text-[18px] text-[20px]",
   };
   
   export { styles };
