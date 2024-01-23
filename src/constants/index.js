@@ -6,18 +6,20 @@ import {
     html,
     css,
     reactjs,
-    redux,
+    xd,
+    vue,
+    csharp,
+    mvc,
     tailwind,
-    nodejs,
-    mongodb,
     git,
     figma,
-    docker,
     feds,
     carrent,
     jobit,
     tripguide,
     threejs,
+    gsap,
+    bootstrap
   } from "../assets";
   
   export const navLinks = [
@@ -28,6 +30,10 @@ import {
     {
       id: "work",
       title: "經歷",
+    },
+    {
+      id: "skills",
+      title: "技能",
     },
     {
       id: "project",
@@ -72,36 +78,44 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Vue JS",
+      icon: vue,
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
     },
     {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "Bootstrap",
+      icon: bootstrap,
     },
     {
       name: "Three JS",
       icon: threejs,
     },
     {
+      name: "GSAP",
+      icon: gsap,
+    },
+    {
+      name: "C#",
+      icon: csharp,
+    },
+    {
+      name: "ASP.NET MVC",
+      icon: mvc,
+    },
+    {
       name: "git",
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "Adobe XD",
+      icon: xd,
     },
     {
-      name: "docker",
-      icon: docker,
+      name: "Figma",
+      icon: figma,
     },
   ];
   
