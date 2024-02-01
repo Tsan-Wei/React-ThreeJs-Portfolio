@@ -14,7 +14,7 @@ import {
     git,
     figma,
     feds,
-    carrent,
+    GiftsBackend,
     jobit,
     tripguide,
     threejs,
@@ -36,7 +36,7 @@ import {
       title: "技能",
     },
     {
-      id: "project",
+      id: "works",
       title: "作品集",
     },
     {
@@ -134,93 +134,66 @@ import {
     }
     
   ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
+
   const projects = [
     {
-      name: "Car Rent",
+      name: "遠東百貨行銷企劃系統",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "負責產出各部門報表需求以及與POS機串接，實現分店贈品兌換的自動化處理，進而有效提升各項業務流程效率。主要工作為開發新功能以及現有功能維護。後續主要負責規劃系統改版頁面設計、設計規範、整體畫面切版以及部分功能邏輯重構。",
       tags: [
         {
-          name: "react",
+          name: "ASP.NET MVC",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
+          name: "C#",
+          color: "blue-text-gradient",
         },
         {
-          name: "tailwind",
-          color: "pink-text-gradient",
+          name: "MS SQL",
+          color: "blue-text-gradient",
         },
       ],
-      image: carrent,
+      image: GiftsBackend,
       source_code_link: "https://github.com/",
     },
     {
-      name: "Job IT",
+      name: "遠東百貨電子餐券系統",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "針對財務會計部門需求，未來將開放部份分店餐廳使用電子餐券進而開發此系統。主要工作為規劃系統頁面設計、設計規範、整體畫面切版以及報表功能撰寫。",
       tags: [
         {
-          name: "react",
+          name: "ASP.NET MVC",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
-          color: "green-text-gradient",
+          name: "C#",
+          color: "blue-text-gradient",
         },
         {
-          name: "scss",
-          color: "pink-text-gradient",
+          name: "MS SQL",
+          color: "blue-text-gradient",
         },
       ],
       image: jobit,
       source_code_link: "https://github.com/",
     },
     {
-      name: "Trip Guide",
+      name: "遠東百貨餐廳訂候位系統",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "建置在遠東百貨APP內的功能，提供了消費者在第一時間了解餐廳候位的詳細資訊，增加整體用餐的便利性。主要工作為規劃系統頁面設計、整體畫面切版以及串接Inline API。",
       tags: [
         {
-          name: "nextjs",
+          name: "ASP.NET MVC",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
-          color: "green-text-gradient",
+          name: "C#",
+          color: "blue-text-gradient",
         },
         {
-          name: "css",
-          color: "pink-text-gradient",
+          name: "MS SQL",
+          color: "blue-text-gradient",
         },
       ],
       image: tripguide,
@@ -228,4 +201,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, projects };

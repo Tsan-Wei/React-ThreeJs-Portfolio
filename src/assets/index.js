@@ -24,6 +24,7 @@ import threejs from "./tech/threejs.svg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import GiftsBackend from "./gifts_backend.png";
 
 export {
   logo,
@@ -52,4 +53,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  GiftsBackend
 };

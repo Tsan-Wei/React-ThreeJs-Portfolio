@@ -77,6 +77,7 @@
   ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .blue-text-gradient {
@@ -89,10 +90,12 @@
   background: linear-gradient(
     to top,
     #2f80ed,
-    #56ccf2
+    #b6d7e2
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .pink-text-gradient {
@@ -109,6 +112,7 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* canvas- styles */
