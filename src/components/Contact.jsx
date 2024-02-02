@@ -45,7 +45,7 @@ const Contact = () => {
           <button type='submit' className='px-8 py-3 border-4 border-[#353641] w-full text-white font-bold shadow-md shadow-primary rounded-xl'>{loading ? '傳送中...' : '傳送'}</button>
         </form>
       </motion.div>
-      <motion.div variants={slideIn('right',"tween", 0.2, 1)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
+      <motion.div variants={slideIn('right',"tween", 0.2, 1)} className='xl:w-[500px] xl:h-auto md:h-[550px] h-[350px]'>
         <EarthCanvas/>
       </motion.div>
     </div>
