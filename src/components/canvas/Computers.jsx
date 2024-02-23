@@ -6,7 +6,7 @@ import CanvasLoader from '../Loader';
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
-    <mesh>1
+    <mesh>
       <hemisphereLight intensity={1}/>
       <pointLight intensity={40}/> 
       <spotLight position={[-20, 50, 10]} angle={0.12} penumbra={1} intensity={1} castShadow shadow-mapSize={1024}/>
