@@ -60,62 +60,77 @@ import {
     {
       name: "HTML 5",
       icon: html,
+      type: "前端"
     },
     {
       name: "CSS 3",
       icon: css,
+      type: "前端"
     },
     {
       name: "JavaScript",
       icon: javascript,
+      type: "前端"
     },
     {
       name: "TypeScript",
       icon: typescript,
+      type: "前端"
     },
     {
       name: "React JS",
       icon: reactjs,
+      type: "前端"
     },
     {
       name: "Vue JS",
       icon: vue,
+      type: "前端"
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
+      type: "前端"
     },
     {
       name: "Bootstrap",
       icon: bootstrap,
+      type: "前端"
     },
     {
       name: "Three JS",
       icon: threejs,
+      type: "前端"
     },
     {
       name: "GSAP",
       icon: gsap,
+      type: "前端"
     },
     {
       name: "C#",
       icon: csharp,
+      type: "後端"
     },
     {
       name: "ASP.NET MVC",
       icon: mvc,
+      type: "後端"
     },
     {
       name: "git",
       icon: git,
+      type: "其他"
     },
     {
       name: "Adobe XD",
       icon: xd,
+      type: "其他"
     },
     {
       name: "Figma",
       icon: figma,
+      type: "其他"
     },
   ];
   
