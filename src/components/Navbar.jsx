@@ -1,8 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
+import { motion, AnimatePresence } from 'framer-motion'
+
+const navbarVariants = {
+  hidden: {
+    x: '100vw',
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 120,
+      delay: 0,
+    },
+  },
+  exit: {
+    x: '100vw',
+    opacity: 0,
+    transition: {
+      delay: 0,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -23,7 +48,14 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
+  const handleLinkClick = (id) => {
+    const anchor = document.querySelector(`#${id}`);
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <nav
     className={`${styles.paddingX} w-full flex items-center fixed top-0 z-20 ${scrolled ? "bg-[#000f26]" : "bg-transparent"
@@ -45,18 +77,39 @@ const Navbar = () => {
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
             <img src={toggle ? close : menu} alt={menu} className="w-[28px] h-[28px] object-contain cursor-pointer" onClick={() => setToggle(!toggle)} />
-            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-              <ul className='list-none flex justify-end items-start flex-col gap-4'>
-                {navLinks.map((link) => (
-                  <li key={link.id} className={`${active === link.title ? "text-white" : 'text-secondary'} font-poppins font-bold cursor-pointer text-[16px]`} onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}>
-                    <a href={`#${link.id}`}>{link.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <AnimatePresence>
+                {toggle && (
+                  <motion.div
+                    className="fixed inset-0 bg-black bg-opacity-75 sm:bg-opacity-95 z-20 flex flex-col items-center justify-center"
+                    variants={navbarVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <motion.ul
+                      className="list-none flex flex-col items-center justify-center gap-6"
+                      variants={navbarVariants}
+                    >
+                      {navLinks.map((link) => (
+                        <motion.li
+                          key={link.id}
+                          variants={navbarVariants}
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`text-white font-poppins font-bold cursor-pointer text-[18px]`}
+                          onClick={() => {
+                            setToggle(false);
+                            setActive(link.title);
+                            handleLinkClick(link.id);
+                          }}
+                        >
+                          <Link to={`#${link.id}`}>{link.title}</Link>
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
         </div>
       </div>
     </nav>

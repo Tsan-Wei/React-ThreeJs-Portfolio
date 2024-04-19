@@ -25,7 +25,14 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import GiftsBackend from "./gifts_backend.png";
-
+import Sql from "./sql.jpeg";
+import eApproval from './eApproval.png';
+import Figma from './tech/figma.png';
+import XD from './tech/xd.png'
+import event from './event.png';
+import reservation from './reservation.png';
+import design1 from './1.png';
+import design2 from './2.png'; 
 export {
   logo,
   design,
@@ -53,5 +60,13 @@ export {
   carrent,
   jobit,
   tripguide,
-  GiftsBackend
+  GiftsBackend,
+  Sql,
+  eApproval,
+  Figma,
+  XD,
+  event,
+  reservation,
+  design1,
+  design2
 };

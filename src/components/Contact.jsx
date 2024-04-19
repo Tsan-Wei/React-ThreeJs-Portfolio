@@ -6,6 +6,9 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { EarthCanvas } from './canvas';
+// service id = template_cwyliun
+// email id = service_h7vpr3n
+// public key = 8oijZz9ymi_3y-NPd
 
 const Contact = () => {
   const formRef = useRef();
@@ -18,10 +21,37 @@ const Contact = () => {
   const [loading, setloading] = useState(false);
 
   const handleChange = (e) => {
-
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value})
   };
   const handleSubmit = (e) => {
+    e.preventDefault();
+    setloading(true);
 
+    emailjs.send(
+      'service_h7vpr3n',
+      'template_cwyliun',
+      {
+        from_name: form.name,
+        to_name: 'TsanWei',
+        from_email: form.email,
+        to_email: 'a88376219@gmail.com',
+        message: form.message
+      },
+      '8oijZz9ymi_3y-NPd'
+      .then(() => {
+        setloading(false);
+        alert("感謝您的來信，我將盡快回覆您！");
+        setForm({
+          name: '', 
+          email: '',
+          messgae: ''
+        })
+      }, (error) => {
+        setloading(false);
+        console.log(error);
+      })
+   )
   };
 
   return (
