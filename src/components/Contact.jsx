@@ -51,7 +51,11 @@ const Contact = () => {
       }, (error) => {
         setloading(false);
         console.log(error);
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> dev_Mac
   };
 
   return (
