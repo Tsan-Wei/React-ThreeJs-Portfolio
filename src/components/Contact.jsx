@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -5,7 +6,6 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { EarthCanvas } from './canvas';
-
 // service id = template_cwyliun
 // email id = service_h7vpr3n
 // public key = 8oijZz9ymi_3y-NPd
@@ -21,8 +21,7 @@ const Contact = () => {
   const [loading, setloading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
     setForm({ ...form, [name]: value})
   };
   const handleSubmit = (e) => {
@@ -40,7 +39,7 @@ const Contact = () => {
         message: form.message
       },
       '8oijZz9ymi_3y-NPd'
-      ).then(() => {
+    ).then(() => {
         setloading(false);
         alert("感謝您的來信，我將盡快回覆您！");
         setForm({
@@ -51,7 +50,8 @@ const Contact = () => {
       }, (error) => {
         setloading(false);
         console.log(error);
-      });
+      }
+    );
   };
 
   return (
