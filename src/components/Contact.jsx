@@ -39,7 +39,7 @@ const Contact = () => {
         message: form.message
       },
       '8oijZz9ymi_3y-NPd'
-      .then(() => {
+      ).then(() => {
         setloading(false);
         alert("感謝您的來信，我將盡快回覆您！");
         setForm({
@@ -51,7 +51,6 @@ const Contact = () => {
         setloading(false);
         console.log(error);
       })
-   )
   };
 
   return (
